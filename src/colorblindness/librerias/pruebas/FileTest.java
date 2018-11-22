@@ -13,8 +13,8 @@ public class FileTest {
 	@Test
 	//PARA CUANDO LA RUTA ES CORRECTA
 	public void File_CP_1() {
-		String  resultadoEsperado="Q:\\UNSA\\PSoft\\manzana.jpg";
-		File file=new File("Q:\\UNSA\\PSoft\\manzana.jpg");
+		String  resultadoEsperado="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
+		File file=new File("C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg");
 		String valorActual= file.getPath();
 		System.out.println("dsad"+valorActual);
 		assertEquals(resultadoEsperado, valorActual);
@@ -22,8 +22,8 @@ public class FileTest {
 	//PARA CUANDO LA RUTA ES ERRONEA
 	@Test
 	public void File_CP_2() {
-		String  resultadoEsperado="Q:\\UNSA\\PSoft\\manzana.jpg";
-		File file=new File("Q:\\UNSA\\PSoft\\images\\manzana.jpg");
+		String  resultadoEsperado="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
+		File file=new File("C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\imagenes\\manzana.jpg");
 		String valorActual= file.getPath();
 		System.out.println(valorActual);
 		assertEquals(resultadoEsperado, valorActual);
@@ -31,7 +31,7 @@ public class FileTest {
 	//PARA CUANDO LA RUTA ES UN NUMERO
 	@Test
 	public void File_CP_3() {
-		String  resultadoEsperado="Q:\\UNSA\\PSoft\\manzana.jpg";
+		String  resultadoEsperado="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
 		File file=new File("123213");
 		String valorActual= file.getPath();
 		System.out.println(valorActual);
@@ -40,7 +40,7 @@ public class FileTest {
 	//PARA CUANDO LA RUTA ESTA VACIA
 	@Test
 	public void File_CP_4() {
-		String  resultadoEsperado="Q:\\UNSA\\PSoft\\manzana.jpg";
+		String  resultadoEsperado="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
 		File file=new File("");
 		String valorActual= file.getPath();
 		System.out.println(valorActual);
