@@ -110,6 +110,4 @@ public class ColorTest {
 			Color valEsperado = valActual;
 			assertEquals(valActual.getRGB(), valEsperado.getRGB());
 		}
-
-
 }
