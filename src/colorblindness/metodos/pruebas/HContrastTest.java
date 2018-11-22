@@ -1,79 +1,152 @@
 package colorblindness.metodos.pruebas;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeNotNull;
+
+import java.awt.image.BufferedImage;
 
 import org.junit.Test;
 
-public class HContrastTest {
+import colorblindness.colorblindness;
 
+public class HContrastTest {
+	
 	@Test
 	public void cp1Test() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
+		String pathSave="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzanaHC.jpg";
+		int factor=110;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assumeNotNull(imgSalida);
 	}
 	@Test
 	public void cp2Test() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
+		String pathSave="";
+		int factor=110;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assertTrue(imgSalida==null);
 	}
 	@Test
 	public void cp3Test() {
-		fail("Not yet implemented");
+		String pathImagen="";
+		String pathSave="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzanaHC.jpg";
+		int factor=110;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assertTrue(imgSalida==null);
 	}
 	@Test
 	public void cp4Test() {
-		fail("Not yet implemented");
+		String pathImagen="$users#escritorio";
+		String pathSave="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzanaHC.jpg";
+		int factor=110;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assertTrue(imgSalida==null);
 	}
 	@Test
 	public void cp5Test() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
+		String pathSave="$users#escritorio";
+		int factor=110;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assertTrue(imgSalida==null);
 	}
 	@Test
 	public void cp6Test() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
+		String pathSave="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzanaHC1.jpg";
+		int factor=456;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assertTrue(imgSalida==null);
 	}
 	@Test
 	public void cp7Test() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
+		String pathSave="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzanaHC2.jpg";
+		int factor=-6;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assertTrue(imgSalida==null);
 	}
-	@Test
-	public void cp8Test() {
-		fail("Not yet implemented");
-	}
-	@Test
-	public void cp9Test() {
-		fail("Not yet implemented");
-	}
+
 	//Casos de Prueba Valor limite
 	@Test
 	public void cp1VLTest() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
+		String pathSave="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzanaHC1.jpg";
+		int factor=1;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assertTrue(imgSalida==null);
 	}
 	@Test
 	public void cp2VLTest() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
+		String pathSave="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzanaHC1.jpg";
+		int factor=128;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assertTrue(imgSalida==null);
 	}
 	@Test
 	public void cp3VLTest() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
+		String pathSave="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzanaHC1.jpg";
+		int factor=0;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assertTrue(imgSalida==null);
 	}
 	@Test
 	public void cp4VLTest() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
+		String pathSave="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzanaHC1.jpg";
+		int factor=129;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assertTrue(imgSalida==null);
 	}
 	@Test
 	public void cp5VLTest() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\a.jpg";
+		String pathSave="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzanaHC1.jpg";
+		int factor=128;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assumeNotNull(imgSalida);
 	}
 	@Test
 	public void cp6VLTest() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\a.jp";
+		String pathSave="C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzanaHC1.jpg";
+		int factor=128;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assertTrue(imgSalida==null);
 	}
 	@Test
 	public void cp7VLTest() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\a.jpg";
+		String pathSave="C:\\a.jpg";
+		int factor=128;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assumeNotNull(imgSalida);
 	}
 	@Test
 	public void cp8VLTest() {
-		fail("Not yet implemented");
+		String pathImagen="C:\\a.jpg";
+		String pathSave="C:\\a.jp";
+		int factor=128;
+		colorblindness.hContrast(pathImagen, pathSave, factor);
+		BufferedImage imgSalida=colorblindness.open(pathSave);
+		assertTrue(imgSalida==null);
 	}
 
 }
