@@ -1,10 +1,11 @@
 
 //Autor: Condori Huarca Andres
+
 package colorblindness.metodos.pruebas;
 
-import static org.junit.Assert.*;
-import org.junit.After;
-import org.junit.Before;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Assert.*;
 import org.junit.Test;
 
 import colorblindness.colorblindness;
@@ -19,7 +20,7 @@ public class daltonizeTest {
 		String rutaDestino = "C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana2.jpg";
 		boolean value = true;
 		colorblindness.daltonize(tipo,rutaOrigen, rutaDestino, value);
-
+		assertEquals(rutaDestino, "C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana2.jpg");
 	}
 	
 	@Test
@@ -29,6 +30,7 @@ public class daltonizeTest {
 		String rutaDestino = "C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana2.jpg";
 		boolean value = false;
 		colorblindness.daltonize(tipo,rutaOrigen, rutaDestino, value);
+		assertEquals(rutaDestino, "C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana2.jpg");
 	}
 	
 	@Test
@@ -38,6 +40,7 @@ public class daltonizeTest {
 		String rutaDestino = "C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana2.jpg";
 		boolean value = true;
 		colorblindness.daltonize(tipo,rutaOrigen, rutaDestino, value);
+		assertEquals(rutaDestino, "C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana2.jpg");
 	}
 	
 	@Test
@@ -47,6 +50,7 @@ public class daltonizeTest {
 		String rutaDestino = "C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana2.jpg";
 		boolean value = false;
 		colorblindness.daltonize(tipo,rutaOrigen, rutaDestino, value);
+		assertEquals(rutaDestino, "C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana2.jpg");
 	}
 	
 	@Test
@@ -65,6 +69,7 @@ public class daltonizeTest {
 		String rutaDestino = "";
 		boolean value = true;
 		colorblindness.daltonize(tipo,rutaOrigen, rutaDestino, value);
+		
 	}
 	
 	@Test
@@ -72,6 +77,16 @@ public class daltonizeTest {
 		int tipo = -1;
 		String rutaOrigen = "C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
 		String rutaDestino = "C:\\ERROR\\imagesTest\\manzana.jpg";
+		boolean value = true;
+		colorblindness.daltonize(tipo,rutaOrigen, rutaDestino, value);
+		
+	}
+	
+	@Test
+	public void prueba8() {
+		int tipo = 5;
+		String rutaOrigen = "C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzana.jpg";
+		String rutaDestino = "C:\\Users\\roy\\git\\colorblindnessPS\\imagesTest\\manzanaError.jpg";
 		boolean value = true;
 		colorblindness.daltonize(tipo,rutaOrigen, rutaDestino, value);
 	}
