@@ -42,6 +42,17 @@ public class PruebasImagenIO {
 		}
 		return 0;
 	}
+	
+	public static int imageIoOpen(String ruta) {
+        BufferedImage img = null;
+        try {
+            img = ImageIO.read(new File(ruta));
+            return 1;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+		return 0;
+	}
 
 
 
